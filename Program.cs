@@ -13,14 +13,10 @@ namespace EmployeWageComputationProblem
        
         static void Main(string[] args)
         {
-            EmpWageBuilderObject Dmart = new EmpWageBuilderObject("DMart", 20, 2, 10);
-            EmpWageBuilderObject Reliance = new EmpWageBuilderObject("Reliance", 10, 4, 20);
-
-            Dmart.ComputeEmpWage();
-            Console.WriteLine(Dmart.ToString());
-
-            Reliance.ComputeEmpWage();
-            Console.WriteLine(Reliance.ToString());
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addCompanyEmpWage("DMart", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            empWageBuilder.ComputeEmpWage();
         }
         
     }
