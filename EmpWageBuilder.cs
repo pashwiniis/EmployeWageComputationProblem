@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeWageComputationProblem
 {
-    public  class EmpWageBuilderArray
+    public  class EmpWageBuilder: IComputeEmpWage
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
@@ -14,7 +14,7 @@ namespace EmployeWageComputationProblem
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
 
-        public EmpWageBuilderArray()
+        public EmpWageBuilder()
         {
             this.companyEmpWageArray = new CompanyEmpWage[5];
         }
@@ -69,10 +69,10 @@ namespace EmployeWageComputationProblem
                 Console.WriteLine("Days#:" + totalWorkingDays + " Emphrs : " + empHrs);
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
-            //int totalEmpWage = totalEmpHrs *  this.empRatePerHour;
-            //Console.WriteLine("Total Employee wage for company " +company + ": is "+totalEmpWage);
+            
            
         }
+      
 
         
     }
